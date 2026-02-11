@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shakil Selvam — Portfolio</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+  <!-- HACKER PRELOADER -->
+  <!-- HACKER PRELOADER -->
+  <div id="hacker-loader">
+    <div id="glitch-wrapper">
+      <div class="terminal-noise"></div>
+      <div class="scanline"></div>
+      <div id="auth-trigger">CLICK ANYWHERE TO AUTHENTICATE</div>
+      <canvas id="binary-canvas"></canvas>
+      <div class="loader-content">
+        <div class="danger-logo">
+          <svg viewBox="0 0 100 100" class="svg-logo">
+            <!-- Outer GLITCH TRIANGLE -->
+            <path d="M50 2 L98 88 L2 88 Z" fill="none" stroke="#e81c2e" stroke-width="2" />
+            <path d="M50 8 L92 82 L8 82 Z" fill="none" stroke="#e81c2e" stroke-width="1" opacity="0.5" />
+            <!-- DANGER SYMBOL -->
+            <path d="M44 35 L56 35 L54 65 L46 65 Z" fill="#e81c2e" />
+            <circle cx="50" cy="75" r="5" fill="#e81c2e" />
+          </svg>
+        </div>
+        <div class="glitch-text" id="loader-text" data-text="SECURITY BREACH DETECTED">SECURITY BREACH DETECTED</div>
+        <div class="loader-status" id="status-logs"></div>
+      </div>
+    </div>
+  </div>
+
+  <canvas id="bg-canvas"></canvas>
+  <div class="cur" id="cur"></div>
+  <div class="cur-ring" id="curRing"></div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">SLS</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <div class="hero-eyebrow">
+        <div class="eyebrow-dot"></div>Aspiring Cybersecurity Professional<div class="eyebrow-dot"></div>
+      </div>
+      <div class="glitch-wrap">
+        <h1 class="hero-name glitch" data-text="SHAKIL LALAPETTAI SELVAM">
+          SHAKIL<br><span class="accent">LALAPETTAI</span><br>SELVAM
+        </h1>
+      </div>
+      <p class="hero-tagline">A Computer Programming graduate with a passion for cybersecurity, AI, and trading.
+        Building real skills through hands-on labs and relentless curiosity.</p>
+      <div class="typed-line" id="typed-line"><span id="typed-text"></span></div>
+      <div class="hero-badges">
+        <div class="hero-badge" data-gsap="badge">&#128274; Cybersecurity</div>
+        <div class="hero-badge" data-gsap="badge">&#128187; Programming</div>
+        <div class="hero-badge" data-gsap="badge">&#129302; AI &amp; Trading</div>
+      </div>
+      <div class="hero-scroll">
+        <span>Scroll to explore</span>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+    <div class="hero-photo-wrap">
+      <div class="photo-ring">
+        <div class="photo-inner">
+          <img src="images/image (2).jpg" alt="Shakil Selvam">
+          <div class="photo-overlay"></div>
+          <div class="photo-scanlines"></div>
+        </div>
+        <div class="photo-badge">CYBERSEC</div>
+        <div class="photo-counter" id="visit-counter">VIEWS: 0</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-grid">
+      <div class="about-text">
+        <div class="sec-label reveal">Who I Am</div>
+        <h2 class="sec-title reveal">ABOUT<br><span class="r">ME</span></h2>
+        <p class="reveal">I am a Computer Programming graduate with a focused interest in cybersecurity, emerging
+          technologies, and financial markets. I pursue hands-on technical development through virtual labs, personal
+          projects, and structured self-study to build industry-ready skills.</p>
+        <p class="reveal">Currently seeking an entry-level IT or cybersecurity role where I can apply my technical
+          knowledge, analytical thinking, and dedication to continuous learning. I bring a proactive mindset, strong
+          communication skills, and a genuine passion for protecting digital environments.</p>
+      </div>
+      <div class="about-stats reveal">
+        <div class="stat-card">
+          <div class="stat-num counter" data-target="3">0</div>
+          <div class="stat-lbl">Active Projects</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">1</div>
+          <div class="stat-lbl">Diploma</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num counter" data-target="5">0</div>
+          <div class="stat-lbl">Years Experience</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">&#8734;</div>
+          <div class="stat-lbl">Drive to Learn</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="sec-label reveal">What I Do</div>
+    <h2 class="sec-title reveal">SKILLS &amp;<br><span class="r">EXPERTISE</span></h2>
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <span class="skill-icon">&#128274;</span>
+        <div class="skill-name">Cybersecurity</div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar" data-pct="75"></div>
+        </div>
+        <div class="skill-pct">75%</div>
+        <div class="skill-desc">Hands-on learning through virtual labs, building practical skills in threat analysis,
+          network security, and ethical hacking fundamentals.</div>
+      </div>
+      <div class="skill-card reveal">
+        <span class="skill-icon">&#128187;</span>
+        <div class="skill-name">Programming</div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar" data-pct="80"></div>
+        </div>
+        <div class="skill-pct">80%</div>
+        <div class="skill-desc">Proficient in Python, HTML, and JavaScript — building practical solutions and web-based
+          projects from the ground up.</div>
+      </div>
+      <div class="skill-card reveal">
+        <span class="skill-icon">&#129302;</span>
+        <div class="skill-name">AI Prompting</div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar" data-pct="85"></div>
+        </div>
+        <div class="skill-pct">85%</div>
+        <div class="skill-desc">Leveraging large language models and AI tools to automate, create, and solve complex
+          problems efficiently.</div>
+      </div>
+      <div class="skill-card reveal">
+        <span class="skill-icon">&#128200;</span>
+        <div class="skill-name">Crypto &amp; Trading</div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar" data-pct="70"></div>
+        </div>
+        <div class="skill-pct">70%</div>
+        <div class="skill-desc">Active exploration of crypto and equity markets, technical analysis, and strategic
+          portfolio thinking.</div>
+      </div>
+      <div class="skill-card reveal">
+        <span class="skill-icon">&#128421;</span>
+        <div class="skill-name">Windows &amp; Linux</div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar" data-pct="65"></div>
+        </div>
+        <div class="skill-pct">65%</div>
+        <div class="skill-desc">Practical experience in virtual lab environments using VirtualBox for system
+          administration and security testing.</div>
+      </div>
+      <div class="skill-card reveal">
+        <span class="skill-icon">&#127919;</span>
+        <div class="skill-name">Leadership</div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar" data-pct="90"></div>
+        </div>
+        <div class="skill-pct">90%</div>
+        <div class="skill-desc">Five years of cross-industry customer service experience, leading teams with clarity,
+          empathy, and purpose.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="sec-label reveal">What I've Built</div>
+    <h2 class="sec-title reveal">FEATURED<br><span class="r">PROJECTS</span></h2>
+    <div class="projects-grid">
+      <div class="project-card reveal">
+        <div class="proj-num">// 01</div>
+        <div class="proj-title">Dating Web App</div>
+        <div class="proj-desc">A Tinder-inspired front-end web application built as a school project. Focused on clean
+          UI, card-swipe interaction patterns, and responsive design.</div>
+        <div class="proj-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span
+            class="tag">JavaScript</span></div>
+      </div>
+      <div class="project-card reveal">
+        <div class="proj-num">// 02</div>
+        <div class="proj-title">Virtual Security Lab</div>
+        <div class="proj-desc">Personal lab environment using VirtualBox to practice Windows Server and Linux system
+          administration, network configurations, and security fundamentals.</div>
+        <div class="proj-tags"><span class="tag">VirtualBox</span><span class="tag">Linux</span><span
+            class="tag">Windows Server</span></div>
+      </div>
+      <div class="project-card reveal">
+        <div class="proj-num">// 03</div>
+        <div class="proj-title">AI &amp; Cyber Research</div>
+        <div class="proj-desc">Ongoing self-directed projects exploring AI tools, prompt engineering strategies, and
+          applied cybersecurity techniques through research and labs.</div>
+        <div class="proj-tags"><span class="tag">AI Tools</span><span class="tag">Cybersecurity</span><span
+            class="tag">Research</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="sec-label reveal">Background</div>
+    <h2 class="sec-title reveal">EXPERIENCE &amp;<br><span class="r">EDUCATION</span></h2>
+    <div class="exp-wrap">
+      <div class="exp-item reveal">
+        <div class="exp-role">Computer Programming Diploma</div>
+        <div class="exp-org">&#47;&#47; Post-Secondary Education</div>
+        <div class="exp-desc">Completed a comprehensive Computer Programming diploma covering software development
+          fundamentals, data structures, web technologies, and applied programming.</div>
+      </div>
+      <div class="exp-item reveal">
+        <div class="exp-role">Customer Service Professional</div>
+        <div class="exp-org">&#47;&#47; 5 Years of Cross-Industry Experience</div>
+        <div class="exp-desc">Accumulated five years of diverse customer service experience across multiple industries,
+          consistently delivering high-quality interactions, resolving complex issues, and demonstrating adaptability,
+          professionalism, and strong interpersonal skills in every role.</div>
+      </div>
+      <div class="exp-item reveal">
+        <div class="exp-role">Self-Directed Technical Learning</div>
+        <div class="exp-org">&#47;&#47; Ongoing — Personal Labs &amp; Projects</div>
+        <div class="exp-desc">Continuously building expertise through personal virtual labs, online courses,
+          cybersecurity challenges, trading analysis, and AI tool experimentation.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-card reveal">
+      <div class="sec-label">05 // UPLINK</div>
+      <h2 class="sec-title">LET'S <span class="r">CONNECT</span></h2>
+      <p class="contact-tagline">I am actively seeking entry-level IT and cybersecurity opportunities. If you are
+        looking for a motivated, technically driven professional ready to contribute from day one — let's connect.</p>
+
+      <div class="contact-grid">
+        <div class="contact-method">
+          <span class="method-label">GMAIL // RECEPTOR</span>
+          <a href="mailto:shakilrenesh76@gmail.com" class="contact-link email-premium">
+            shakilrenesh76@gmail.com
+            <span class="link-circle"></span>
+          </a>
+        </div>
+
+        <div class="contact-method">
+          <span class="method-label">PROFESSIONAL // NETWORK</span>
+          <a href="https://www.linkedin.com/in/shakilrenesh/" target="_blank" class="contact-link">
+            LinkedIn Profile
+            <span class="link-circle"></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-footer">
+        <div class="contact-available">
+          <div class="avail-dot"></div>Open to Entry-Level IT &amp; Cybersecurity Roles
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 SHAKIL SELVAM. ALL RIGHTS RESERVED.</p>
+    <div class="footer-logo">SLS</div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
